@@ -102,6 +102,6 @@ for more details.
 
 ---
 
-Happy coding!
+![image](https://github.com/user-attachments/assets/3f5f43a6-69cf-4da8-8e10-d5c01f4432e2)
 
 **Team Happy Galley**
