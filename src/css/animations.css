@@ -16,3 +16,15 @@
     transform: translateX(-50%) translateY(100%) scale(1);
   }
 }
+
+.scale-up-center {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.scale-up-center:hover {
+  -webkit-transform: scale(1.11);
+  transform: scale(1.11);
+}
