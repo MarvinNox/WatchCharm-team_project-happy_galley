@@ -3,7 +3,11 @@
 @import url('./fonts.css');
 @import url('./base.css');
 @import url('./container.css');
-
+.body-404 {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
 .section-404-backdrop {
   position: relative;
   color: black;
@@ -31,8 +35,10 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
   @media screen and (min-width: 1280px) {
-    background-color: #ffffff;
+    background-color: white;
     color: black;
+    display: flex;
+    flex-direction: row;
   }
 }
 .content-404 {
@@ -49,6 +55,8 @@
     gap: 0px;
     justify-content: baseline;
     align-items: baseline;
+    padding: 0;
+    margin: 0;
   }
 }
 .wrapper-404 {
@@ -59,14 +67,15 @@
   @media screen and (min-width: 768px) {
     gap: 20px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 70px;
     min-width: 500px;
   }
   @media screen and (min-width: 1280px) {
-    min-width: 1000px;
-    margin-top: 100px;
+    min-width: 700px;
+    margin-top: 300px;
     margin-bottom: 40px;
     text-align: left;
+    margin-left: 200px;
   }
 }
 .button-404 {
@@ -154,4 +163,18 @@ a {
 @media screen and (min-width: 768px) {
 }
 @media screen and (min-width: 1280px) {
+}
+.carpet-404 {
+  width: 300px;
+  height: 300px;
+  background-color: var(--accent);
+  border-radius: 50px;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+    font-size: 48px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
 }
