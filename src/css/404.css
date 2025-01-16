@@ -4,21 +4,9 @@
 @import url('./base.css');
 @import url('./container.css');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #000;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
 }
 
 .container {
@@ -26,272 +14,97 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
-.error-content {
-  margin-bottom: 20px;
+@media (min-width: 1280px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .error-content {
+    text-align: left;
+  }
 }
 
 .error-code {
-  font-size: 16px;
-  color: #888;
+  font-size: 32px;
+  color: var(--accent);
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .error-title {
-  font-size: 48px;
+  font-size: 120px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+  .error-title {
+    font-size: 80px;
+  }
+}
+@media (min-width: 1280px) {
+  .error-title {
+    font-size: 92px;
+  }
 }
 
 .error-text {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .error-text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .error-text {
+    font-size: 24px;
+  }
 }
 
 .back-button {
   display: inline-block;
-  text-decoration: none;
-  color: #fff;
+  color: var(--cards);
   background-color: #007bff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px 18px;
+  border-radius: 18px;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: background-color 300ms ease-in-out, translate 300ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .back-button {
+    font-size: 20px;
+    padding: 16px 24px;
+  }
 }
 
 .back-button:hover {
   background-color: #0056b3;
+  translate: 5px;
+}
+.back-button:active {
+  translate: 10px;
 }
 
-.error-image img {
+.error_img {
   display: none;
 }
-
 @media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
+  .error_img {
+    max-width: 350px;
+    display: block;
   }
-
-  .error-content {
-    text-align: left;
-    margin-right: 20px;
-  }
-
-  .error-title {
-    font-size: 64px;
-  }
-
-  .error-text {
-    font-size: 20px;
-  }
-
-  .back-button {
-    font-size: 18px;
-  }
-
-  .error-image img {
-    height: auto;
-    object-fit: cover;
+}
+@media (min-width: 1280px) {
+  .error_img {
     max-width: 400px;
-    display: block;
   }
 }
-
-@media (min-width: 1024px) {
-  .container {
-    padding: 60px 100px;
-  }
-
-  .error-title {
-    font-size: 72px;
-  }
-
-  .error-text {
-    font-size: 24px;
-  }
-
-  .back-button {
-    font-size: 20px;
-    padding: 12px 24px;
-  }
-
-  .error-image img {
-    max-width: 500px;
-  }
-}
-/* .text-title-404,
-h1,
-p,
-a {
-  position: relative;
-  z-index: 1;
-}
-.body-404 {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-}
-.section-404-backdrop {
-  position: relative;
-  color: black;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url(../img/404/carpet.png);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  @media screen and (min-width: 1280px) {
-    background-image: none;
-  }
-}
-.section-404-backdrop::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 0;
-  @media screen and (min-width: 1280px) {
-    background-color: white;
-    color: black;
-    display: flex;
-    flex-direction: row;
-  }
-}
-.content-404 {
-  display: flex;
-  max-width: 500px;
-  margin-top: 50px;
-  flex-direction: column;
-  @media screen and (min-width: 768px) {
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-  }
-  @media screen and (min-width: 1280px) {
-    gap: 0px;
-    justify-content: baseline;
-    align-items: baseline;
-    padding: 0;
-    margin: 0;
-  }
-}
-.wrapper-404 {
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-  margin-bottom: 20px;
-  @media screen and (min-width: 768px) {
-    gap: 20px;
-    text-align: center;
-    margin-top: 70px;
-    min-width: 500px;
-  }
-  @media screen and (min-width: 1280px) {
-    min-width: 700px;
-    margin-top: 300px;
-    margin-bottom: 40px;
-    text-align: left;
-    margin-left: 200px;
-  }
-}
-.button-404 {
-  display: inline-block;
-  max-width: 200px;
-  max-height: 50px;
-  border-radius: 16px;
-  padding: 12px 50px;
-  background-color: #ffffff;
-  color: var(--accent);
-  border: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  text-align: center;
-  @media screen and (min-width: 768px) {
-    background-color: var(--accent);
-    color: #ffffff;
-    min-width: 160px;
-    max-height: 102px;
-  }
-}
-.button-404:hover,
-.button-404:focus {
-  color: #ffffff;
-  background-color: var(--accent);
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  @media screen and (min-width: 768px) {
-    background-color: #ffffff;
-    color: var(--accent);
-  }
-}
-.error-span {
-  color: var(--accent);
-}
-.title-404 {
-  font-size: 82px;
-  line-height: 87%;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  @media screen and (min-width: 768px) {
-    font-size: 150px;
-    margin-bottom: 15px;
-  }
-  @media screen and (min-width: 1280px) {
-    color: black;
-  }
-}
-.text-404 {
-  font-weight: 400px;
-  letter-spacing: -0.02em;
-  font-size: 20px;
-  line-height: 129%;
-  color: var(--accent);
-  @media screen and (min-width: 1280px) {
-    display: none;
-  }
-}
-.text-title-404 {
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 92%;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  @media screen and (min-width: 768px) {
-    font-size: 56px;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 0px;
-    font-size: 72px;
-    color: black;
-  }
-}
-.carpet-404 {
-  width: 300px;
-  height: 300px;
-  background-color: var(--accent);
-  border-radius: 50px;
-  display: none;
-  @media screen and (min-width: 1280px) {
-    display: block;
-    font-size: 48px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-} */
